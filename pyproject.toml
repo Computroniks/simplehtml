@@ -1,0 +1,20 @@
+# SPDX-FileCopyrightText: 2023 Matthew Nickson <mnickson@sidingsmedia.com>
+# SPDX-License-Identifier: CC0-1.0
+
+[tool.poetry]
+name = "standalonehtml"
+version = "0.1.0"
+description = "Generate simple, standalone HTML documents"
+authors = ["Matthew Nickson <mnickson@sidingsmedia.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.group.dev.dependencies]
+autopep8 = "^2.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
