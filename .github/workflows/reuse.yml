@@ -5,7 +5,7 @@ name: REUSE
 on: push
 
 jobs:
-  test:
+  compliance-check:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -13,6 +13,12 @@ jobs:
 
       - name: REUSE Compliance Check
         uses: fsfe/reuse-action@v1
+
+  generate-spdx-bom:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
 
       - name: Generate SPDX BOM
         uses: fsfe/reuse-action@v1
