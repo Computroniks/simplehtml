@@ -46,14 +46,14 @@ class Element(ABC):
         """
 
         output = []
-        for attribute in self.attributes:
-            if self.attributes[attribute] != "" and self.attributes[attribute] is not None:
-                if attribute in self.name_mapping.keys():
+        for attribute, value in self.attributes.items():
+            if value != "" and value is not None:
+                if attribute in self.name_mapping:
                     output.append(
-                        f"{self.name_mapping[attribute]}=\"{self.attributes[attribute]}\"")
+                        f"{self.name_mapping[attribute]}=\"{value}\"")
                 else:
                     output.append(
-                        f"{attribute}=\"{self.attributes[attribute]}\"")
+                        f"{attribute}=\"{value}\"")
         if len(output) == 0:
             return ""
 
@@ -77,9 +77,6 @@ class VoidElement(Element, ABC):
     """
     VoidElement Void elements
     """
-
-    def __init__(self, **kwargs) -> None:
-        super().__init__(**kwargs)
 
     def __str__(self) -> str:
         """

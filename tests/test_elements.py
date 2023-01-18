@@ -1,6 +1,9 @@
 # SPDX-FileCopyrightText: 2023 Matthew Nickson < mnickson@sidingsmedia.com >
 # SPDX-License-Identifier: MIT
 
+# pylint: disable=line-too-long, missing-class-docstring, wildcard-import
+# pylint: disable=missing-function-docstring, unused-wildcard-import
+
 from standalonehtml.elements.metadata import *
 
 
